@@ -1,36 +1,155 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+ 🧠 AI Agent System (Multi-Tool + Convex + Memory + Streaming)
 
-## Getting Started
+ 🚀 Live Demo
 
-First, run the development server:
+🔗 https://ai-agent-chat-lilac.vercel.app
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+A fully deployed real-time AI agent system that dynamically selects tools, uses persistent memory, and streams responses while answering user queries using external APIs.
+
+---
+
+ ✨ Overview
+
+This project is a full-stack **AI agent system** built using **LangChain, TypeScript, Convex, and multiple external APIs**.
+
+Unlike a basic chatbot, this system:
+- Uses **tool-based reasoning**
+- Maintains **persistent memory (Convex)**
+- Streams responses in real-time
+- Dynamically decides which tool to use based on user intent
+
+It behaves like a lightweight AI agent architecture inspired by production-grade systems.
+
+---
+
+ 🧠 Architecture
+
+User Input  
+↓  
+Next.js Chat UI (Streaming Interface)  
+↓  
+Convex (Memory + Real-time Database)  
+↓  
+LangChain AI Agent (Brain)  
+↓  
+Tool Router (Decision Layer)  
+↓  
+├── 🎥 YouTube Transcript Tool  
+├── 📚 Google Books Tool  
+├── 📖 Wikipedia Tool  
+├── 🌐 Tavily Search Tool  
+├── 🔗 Curl/API Fetch Tool  
+↓  
+⚡ Streaming Response Engine  
+↓  
+Convex (stores final response + chat history)  
+↓  
+UI updates instantly
+
+---
+
+ ⚡ Features
+
+- 🎥 YouTube transcript extraction & summarization  
+- 📚 Google Books search (authors, summaries, details)  
+- 📖 Wikipedia knowledge retrieval  
+- 🌐 Tavily real-time web search  
+- 🔗 Safe API / URL data fetching  
+- ⚡ Convex backend for real-time state management  
+- 🧠 Persistent AI memory (chat history stored in Convex)  
+- 💬 Streaming AI responses for real-time UX  
+- 🧠 Dynamic tool selection by AI agent  
+- 💬 Chat-based interactive interface  
+
+---
+
+ 🧰 Tech Stack
+
+- Next.js  
+- TypeScript  
+- LangChain  
+- Convex (real-time backend + memory)  
+- Tavily API  
+- Google Books API  
+- YouTube Transcript API  
+
+---
+
+ 🧰 Tools Breakdown
+
+ 🎥 YouTube Tool
+Extracts transcripts from YouTube videos and enables summarization and Q&A.
+
+ 📚 Google Books Tool
+Fetches book details including title, author, publication date, and description.
+
+ 📖 Wikipedia Tool
+Retrieves concise encyclopedic summaries of topics, people, and concepts.
+
+ 🌐 Tavily Search Tool
+Provides real-time web search results for up-to-date information.
+
+ 🔗 Curl Tool
+Fetches and parses JSON/text data from public APIs safely.
+
+ ⚡ Convex Backend
+Handles:
+- Real-time database storage  
+- Chat history (memory)  
+- State synchronization between UI and agent  
+
+---
+
+ 🏗️ System Flow
+
+1. User sends a message  
+2. Message is stored in Convex (memory layer)  
+3. AI agent analyzes user intent  
+4. Agent selects the most relevant tool (if needed)  
+5. External API is called  
+6. Streaming response starts immediately  
+7. Response + memory stored in Convex  
+8. UI updates in real-time  
+
+---
+
+ 🔐 Environment Variables
+
+```env
+OPENAI_API_KEY=your_key
+TAVILY_API_KEY=your_key
+GOOGLE_BOOKS_API_KEY=your_key
+CONVEX_DEPLOYMENT=your_key
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+ ▶️ Run Locally
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+pnpm install
+pnpm dev
+```
 
-## Learn More
+Start Convex backend:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npx convex dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+💡 What I Learned
 
-## Deploy on Vercel
+- Building AI agent systems with tool orchestration  
+- Implementing persistent memory using Convex  
+- Designing real-time streaming AI responses  
+- Integrating multiple external APIs into one system  
+- Structuring scalable full-stack AI applications  
+- Building agent reasoning + decision-making systems  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
+ 👩‍💻 Author
+ Dua
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Dua
